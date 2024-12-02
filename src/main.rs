@@ -182,6 +182,13 @@ impl CompressedScript {
     }
 }
 
+#[derive(Clone, Debug, Serialize, Deserialize)]
+pub struct Coin {
+    pub amount: u64,
+    pub height: u32,
+    pub coin_base: u32,
+    pub script: CompressedScript,
+}
 
 impl Coin {
     pub fn from_reader<R: Read + std::io::Seek>(
