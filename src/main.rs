@@ -182,13 +182,6 @@ impl CompressedScript {
     }
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct Coin {
-    pub amount: u64,
-    pub height: u32,
-    pub coin_base: u32,
-    pub script: CompressedScript,
-}
 
 impl Coin {
     pub fn from_reader<R: Read + std::io::Seek>(
@@ -229,13 +222,6 @@ impl Coin {
 }
 
 /// Block bodies are actually stored in normalized form.
-#[derive(Default, Serialize, Deserialize)]
-struct BlockBody {
-    pub tx_index: u64,
-    pub tx_total: u64,
-    pub rev_index: u64,
-    pub rev_total: u64,
-}
 
 fn main() -> anyhow::Result<()> {
     let opt = Opt::parse();
