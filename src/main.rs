@@ -222,6 +222,13 @@ impl Coin {
 }
 
 /// Block bodies are actually stored in normalized form.
+#[derive(Default, Serialize, Deserialize)]
+struct BlockBody {
+    pub tx_index: u64,
+    pub tx_total: u64,
+    pub rev_index: u64,
+    pub rev_total: u64,
+}
 
 fn main() -> anyhow::Result<()> {
     let opt = Opt::parse();
