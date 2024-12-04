@@ -285,7 +285,7 @@ fn main() -> anyhow::Result<()> {
 
     let blocks_path = opt.bitcoin_home_path.join("blocks");
     let block_index_path = blocks_path.join("index");
-    let chainstate_path = opt.bitcoin_home_path.join("chainstate");
+
 
     for path in &[block_index_path, chainstate_path] {
         info!("Opening {}", path.as_os_str().to_string_lossy());
