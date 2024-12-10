@@ -35,7 +35,7 @@ struct Opt {
     skip: Option<usize>,
     #[clap(long, env)]
     debug_after: Option<usize>,
-}
+}                               
       
 /// Used for keying leveldb.
 #[derive(Debug, PartialEq)]
