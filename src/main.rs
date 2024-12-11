@@ -71,7 +71,7 @@ fn xor(vch: &mut [u8], key: &[u8]) {
             }
         }
     }
-}
+}                                
 
 fn decompress_amount(mut x: u64) -> u64 {
     // x = 0  OR  x = 1+10*(9*n + d - 1) + e  OR  x = 1+10*(n - 1) + 9
@@ -95,7 +95,7 @@ fn decompress_amount(mut x: u64) -> u64 {
         n *= 10;
         e -= 1;
     }
-    n
+    n                               
 }
 
 const BLOCK_HAVE_DATA: u64 = 8;
